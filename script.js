@@ -2,9 +2,10 @@ const blank = document.querySelectorAll("input");
 const button = document.querySelector(".btn");
 
 blank.forEach((label) => {
-  label.addEventListener("click", (e) => {
+  label.addEventListener("keydown", (e) => {
+    let codeValue = e.key;
     e.preventDefault();
-    console.log("me estás dando click");
+    console.log("Su tecla presionada es " + codeValue);
   });
 });
 
