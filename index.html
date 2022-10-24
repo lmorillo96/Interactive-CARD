@@ -31,10 +31,16 @@
       </aside>
 
       <article class="card-img">
+        <!-- tarjeta frente -->
         <div class="card-img-front">
           <img class="card-front" src="./sources/img/bg-card-front.png" alt=""/>
           <img class="card-logo" src="./sources/img/card-logo.svg" alt="" />
+          <span class="card-name"></span>
+          <span class="card-number"></span>
+          <!-- <span class="expiration-date">11/24</span> -->
         </div>
+
+        <!-- tarjeta trasera -->
         <img class="card-back" src="./sources/img/bg-card-back.png" alt="" />
       </article>
 
@@ -42,12 +48,20 @@
         <form class="card-form" action="">
           <div class="card-label">
             <label for="">CARDHOLDER NAME</label><br />
-            <input id="cardholder" type="text" placeholder="e.g. Jane Appleseed" />
+            <input 
+              type="text" 
+              placeholder="e.g. Jane Appleseed" 
+              name="name"
+            />
           </div>
 
           <div class="card-label">
             <label for="">CARD NUMBER</label><br />
-            <input type="text" placeholder="e.g. 1234 5678 9123 0000" />
+            <input 
+              type="text" 
+              placeholder="e.g. 1234 5678 9123 0000" 
+              name="number"
+            />
           </div>
 
           <div class="card-label-duo">

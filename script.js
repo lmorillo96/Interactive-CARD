@@ -1,32 +1,42 @@
-const blank = document.querySelectorAll("input");
+const inputs = document.querySelectorAll("input");
 const button = document.querySelector(".btn");
 const customerName = document.querySelector("#cardholder");
 
-/* blank.forEach((label) => {
-  label.addEventListener("keydown", (e) => {
-    let codeValue = e.key;
-    e.preventDefault();
-    codeValue.textContent = "Hola";
-  });
-});
- */
+inputs.forEach((input) => input.addEventListener("keyup", handleInputForm));
 
-button.addEventListener("click", (e) => {
-  e.preventDefault();
-  nameCard();
-});
 
-function nameCard() {
-  let testArray = customerName.value.split("");
-  let arr2 = [];
+function handleInputForm (evento) {
 
-  for (let i = 0; i < testArray.length; i++) {
-    //console.log(testArray[i]);
+  // evento = objecto de tipo KeyboardEvent
+  // {key: value}
+  // acceder a una propiedad de evento --> evento.key 
+  const inputAttributeName = evento.target.name;
+  const inputValue = evento.target.value;
+  const cardName  = document.querySelector(".card-name")
+  const cardNumber = document.querySelector(".card-number")
 
-    if (testArray[i] === testArrayykujuk(new RegExp(/[a-z\s]+/))) {
-      arr2.push(testArray);
+  if (inputAttributeName === 'name') {
+    cardName.innerHTML = inputValue;
+
+    if (!validateInputName(inputValue)) {
+      evento.target.classList.add("input-error")
     } else {
-      console.log("Solo se permite letras!");
+      evento.target.classList.remove("input-error")
     }
   }
+
+  if (inputAttributeName === 'number') {
+    cardNumber.innerHTML = inputValue;
+  }
 }
+
+function validateInputName (texto) {
+  if (texto === "" || texto.length < 5)
+    return false
+  return true
+}
+
+button.addEventListener("click", (e) => {
+  e.preventDefault(); // ✅ aquí sí está correcto
+  console.log("Sumbit");
+});
