@@ -40,18 +40,41 @@ input {
 }
 
 .card-img-front {
-  position: absolute;
+  position: relative;
+  top: 60px;
+  left: -200px;
 }
 
-.card-front {
+.input-error {
+  border: 2px solid red;
+}
+
+
+.card-number,
+.card-name {
+  position: absolute;
+  color: var(--primary-w);
+}
+
+.card-name {
+  top: 100px;
+  left: 30px;
+}
+
+.card-number {
+  top: 120px;
+  left: 30px;
+}
+
+/* .card-front {
   margin-top: 70px;
   margin-left: -250px;
-}
+} */
 
 .card-logo {
   position: absolute;
-  margin-left: -340px;
-  margin-top: 90px;
+  top: 20px;
+  left: 20px;
 }
 
 .card-back {
