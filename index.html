@@ -33,33 +33,38 @@
       <article class="card-img">
         <!-- tarjeta frente -->
         <div class="card-img-front">
-          <img class="card-front" src="./sources/img/bg-card-front.png" alt=""/>
+          <img
+            class="card-front"
+            src="./sources/img/bg-card-front.png"
+            alt=""
+          />
           <img class="card-logo" src="./sources/img/card-logo.svg" alt="" />
           <span class="card-name"></span>
           <span class="card-number"></span>
+          <span class="card-expM"></span>
+          <span class="card-expY"></span>
           <!-- <span class="expiration-date">11/24</span> -->
         </div>
 
         <!-- tarjeta trasera -->
-        <img class="card-back" src="./sources/img/bg-card-back.png" alt="" />
+        <div class="card-img-back">
+          <img class="card-back" src="./sources/img/bg-card-back.png" alt="" />
+          <span class="card-cvc"></span>
+        </div>
       </article>
 
       <article class="card-information-legend">
         <form class="card-form" action="">
           <div class="card-label">
             <label for="">CARDHOLDER NAME</label><br />
-            <input 
-              type="text" 
-              placeholder="e.g. Jane Appleseed" 
-              name="name"
-            />
+            <input type="text" placeholder="e.g. Jane Appleseed" name="name" />
           </div>
 
           <div class="card-label">
             <label for="">CARD NUMBER</label><br />
-            <input 
-              type="text" 
-              placeholder="e.g. 1234 5678 9123 0000" 
+            <input
+              type="text"
+              placeholder="e.g. 1234 5678 9123 0000"
               name="number"
             />
           </div>
@@ -68,14 +73,14 @@
             <div class="card-label">
               <label for="">EXP. DATE (MM/YY)</label><br />
               <div class="input-short">
-                <input type="text" placeholder="MM" />
-                <input type="text" placeholder="YY" />
+                <input type="text" placeholder="MM" name="exp-dateM" />
+                <input type="text" placeholder="YY" name="exp-dateY" />
               </div>
             </div>
 
             <div class="card-label">
               <label for="">CVC</label><br />
-              <input type="text" placeholder="e.g. 123" />
+              <input type="text" placeholder="e.g. 123" name="cvc" />
             </div>
           </div>
           <button class="btn">Confirm</button>
