@@ -7,6 +7,7 @@
   --veryd-violet: hsl(278, 68%, 11%);
   --principal-font: "Space Grotesk", "sans-serif";
   --font: 18px;
+  --secondary-font: 'Roboto Mono', monospace;
 }
 
 * {
@@ -41,6 +42,7 @@ input {
 
 .card-img {
   margin: 0 auto;
+  font-family: var(--secondary-font);
 }
 
 .card-img-front {
@@ -62,23 +64,28 @@ input {
 }
 
 .card-name {
-  top: 100px;
+  top: 160px;
   left: 30px;
+  letter-spacing: 2px;
 }
 
 .card-number {
-  top: 120px;
+  font-size: 21px;
+  letter-spacing: 6px;
+  top: 110px;
   left: 30px;
 }
 
 .card-expM {
-  top: 140px;
-  left: 30px;
+  top: 160px;
+  letter-spacing: 3px;
+  left: 290px;
 }
 
 .card-expY {
-  top: 140px;
-  left: 55px;
+  top: 160px;
+  left: 320px;
+  letter-spacing: 3px;
 }
 
 .card-logo {
@@ -101,8 +108,9 @@ input {
 
 .card-cvc {
   position: absolute;
-  top: 230px;
-  right: 140px;
+  top: 290px;
+  right: 170px;
+  letter-spacing: 2px;
   color: var(--primary-w);
 }
 
