@@ -1,5 +1,3 @@
-import { validateInputName } from "./validation.js";
-
 export function handleInputForm(evento) {
   // evento = objecto de tipo KeyboardEvent
   // {key: value}
