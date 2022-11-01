@@ -64,7 +64,10 @@
               type="text"
               placeholder="e.g. Jane Appleseed"
               name="name"
-              title="Digite su nombre"
+              title="Put your full name (Only Uppercase)"
+              pattern="[A-Z ]+"
+              minlength="10"
+              maxlength="25"
               required
             />
           </div>
@@ -73,10 +76,13 @@
             <label for="">CARD NUMBER</label><br />
             <input
               type="text"
-              placeholder="e.g. 1234 5678 9123 0000"
+              placeholder="e.g. 1111-2222-3333-4444"
               name="number"
-              size="24"
-              maxlength="15"
+              title="Put your card Number (Only Numbers)"
+              pattern="[0-9]+"
+              minlength="15"
+              maxlength="16"
+              required
             />
           </div>
 
@@ -84,14 +90,14 @@
             <div class="card-label">
               <label for="">EXP. DATE (MM/YY)</label><br />
               <div class="input-short">
-                <input type="text" placeholder="MM" name="exp-dateM" />
-                <input type="text" placeholder="YY" name="exp-dateY" />
+                <input type="text" placeholder="MM" title="Put your Exp Month (Only numbers)" name="exp-dateM" pattern="[0-9]+" maxlength="2" required />
+                <input type="text" placeholder="YY" title="Put your Exp Day (Only numbers)" name="exp-dateY" pattern="[0-9]+" maxlength="2" required />
               </div>
             </div>
 
             <div class="card-label">
               <label for="">CVC</label><br />
-              <input type="text" placeholder="e.g. 123" name="cvc" />
+              <input type="text" placeholder="e.g. 123" title="Put your CVC (ONly Numbers)" name="cvc" pattern="[0-9]+" minlength="3" maxlength="4" required /> 
             </div>
           </div>
           <button class="btn">Confirm</button>
