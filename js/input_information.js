@@ -13,11 +13,11 @@ export function handleInputForm(evento) {
   if (inputAttributeName === "name") {
     cardName.innerHTML = inputValue;
 
-    if (!validateInputName(inputValue)) {
-      evento.target.classList.add("input-error");
-    } else {
-      evento.target.classList.remove("input-error");
-    }
+    // if (!validateInputName(inputValue)) {
+    //   evento.target.classList.add("input-error");
+    // } else {
+    //   evento.target.classList.remove("input-error");
+    // }
   }
 
   if (inputAttributeName === "number") {
